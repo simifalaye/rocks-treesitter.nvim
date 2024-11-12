@@ -79,7 +79,8 @@ configure this plugin.
     disable = [
       "lhaskell"
     ]
-    
+    config_path = "rocks-treesitter.toml"
+
     [treesitter.parser_map]
     # You can add custom filetype to parser mappings.
     # Determine the filetype with ':lua =vim.bo[0].filetype'.
@@ -104,6 +105,7 @@ Or, you add a lua table to your `vim.g.rocks_nvim` setting:
             parser_map = { },
             ---@type string[] | fun(lang: string, bufnr: integer):boolean
             disable = { }, -- filetypes or a function
+            config_path = "rocks-treesitter.toml",
         },
     }
 <
